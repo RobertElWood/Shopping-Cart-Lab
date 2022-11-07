@@ -1,0 +1,88 @@
+<html>
+    <head>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-Zenh87qX5JnK2Jl0vWa8Ck2rdkQ2Bzep5IDxbcnCeuOxjzrPF/et3URy9Bv1WTRi" crossorigin="anonymous">
+        <script src = "ShoppingCart.js" async></script>
+      </head>
+        <body>
+            <h3 class="text-center"><b>Welcome To The Essentials Store!</b></h3>
+            <br>
+            <p class="text-center">We stock all the essential foodstuffs you might have missed at the big box store!</p>
+            <p class="text-center">We may not have the food that you want...But we have the food that you need!</p>
+            <p class="text-center">Please select any items you'd like below, then hit purchase.</p>
+            <br>
+            <table class="table table-dark table-striped" id ="table1">
+                <thead>
+                  <tr>
+                    <th scope="col">#</th>
+                    <th scope="col">Item:</th>
+                    <th scope="col">Price:</th>
+                    <th scope="col">Qty:</th>
+                  </tr>
+                </thead>
+                <tbody id="tableData">
+                  <tr>
+                    <th scope="row">1</th>
+                    <td id = "p1Name">Milk</td>
+                    <td id = "p1Price">$2.99</td>
+                    <td><button type = "button" class="btn-primary" name="Product1" onclick="addToCart('Milk', 2.99)">ADD TO CART</button></td>
+                  </tr>
+                  <tr>
+                    <th scope="row">2</th>
+                    <td id = "p2Name">Bread</td>
+                    <td id = "p2Price">$2.75</td>
+                    <td><button type = "button"  class="btn-primary"  name="Product2" onclick="addToCart('Bread', 2.75)">ADD TO CART</button></td>
+                  </tr>
+                  <tr>
+                    <th scope="row">3</th>
+                    <td id = "p3Name">Eggs</td>
+                    <td id = "p3Price">$1.99</td>
+                    <td><button type = "button" class="btn-primary" name="Product3" onclick="addToCart('Eggs', 1.99)">ADD TO CART</button></td>
+                  </tr>
+                </tbody>
+              </table> 
+              <br>
+              <h3 class="text-center"><b>Your Cart:</b></h3>
+              <br>
+              <div class="container">
+                <div class="col justify content-center">
+              <table class="table table-dark table-striped" id="table2">
+                <thead>
+                  <tr>
+                    <th scope="col" class="col-sm"><center>Item:</center></th>
+                    <th scope="col" class="col-sm"><center>Price:</center></th>
+                    <th scope="col" class="col-sm"><center>Amt:</center></th> 
+                </tr>            
+                </thead>
+                <tbody id="tableData2">
+                  <tr>
+                    <div class="cart-elements1">
+                      <th></th>
+                      <th></th>
+                      <th></th>
+                    </div>
+                  </tr>
+                  <tr>
+                    <div class="cart-elements2">
+                      <th></th>
+                      <th></th>
+                      <th></th>
+                    </div>
+                  </tr>
+                  <tr>
+                    <div class="cart-elements3">
+                      <th></th>
+                      <th></th>
+                      <th></th>
+                    </div>
+                  </tr>
+                </tbody>
+              </table>
+            </div>
+          </div>
+              <h3 class="text-center"><input type = submit name ="Checkout" value="Purchase" onclick="purchaseCart()"></h3>
+          <div id = "CHECKOUT">
+          </div>
+        </body>
+</html>
